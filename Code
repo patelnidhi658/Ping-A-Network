@@ -1,0 +1,7 @@
+import subprocess
+
+def ping(host):
+    result = subprocess.run(['ping', '-c', '3', host], stdout=subprocess.PIPE)
+    return result.stdout.decode()
+
+print(ping('google.com'))
